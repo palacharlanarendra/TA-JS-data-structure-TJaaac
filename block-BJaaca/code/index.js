@@ -1,14 +1,56 @@
 //  Follow instructions below and write code accordingly.
 
 //  - Create a variable named `character` using `let` assign a value of empty object.
+let character = {};
 
 //  - Go to this [Arya Stark](https://awoiaf.westeros.org/index.php/Arya_Stark)
 
 //  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
-
-// - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
-
 let age = 20;
+
+character = {
+    characterName:"Arya",
+    greet:function greet(){
+        alert(`I am ${character["characterName"]} and my title is ${character["title"]}`);
+    },
+    isAdult:function funcage(){
+        let newage = age>18?true:false;
+        return newage;
+    },
+    changeIsAdult:function(){
+        if(this.isAdult){
+            return false;
+        }else{
+            return true;
+        }
+    },
+    "console.log":function(){
+        console.log(42);
+    },
+    totalSeasons:1 + 2 + 3 + 2,
+};
+character["character-age"]=age;
+character["sur name"]="stark";
+character["title"]="Lady of Winterfell"
+
+character.greet();
+
+character.isFemale=true;
+character["greet"];
+greetVariable=function greet(){
+    alert(`She is ${character["characterName"]} and her title is ${character["title"]}`);
+}
+character.greet=greetVariable();
+character.isAdult = funcage();
+
+character["isAdult"];
+character["isAdult"]=character.changeIsAdult();
+let keyName = 'playedBy';
+character["playedBy"]="Maisie Williams";
+alert(character[keyName]);
+
+character.totalSeasons;
+// - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
 // - Add a new key `sur name` with the value of the surname of the character i.e "Stark". (Don't remove the space between `sur` and `name`)
 
@@ -30,7 +72,7 @@ let age = 20;
 
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
-let keyName = 'playedBy';
+
 
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
 
