@@ -10,29 +10,19 @@ let age = 20;
 
 character = {
     characterName:"Arya",
-    greet:function greet(){
-        alert(`I am ${character["characterName"]} and my title is ${character["title"]}`);
-    },
-    isAdult:function funcage(){
-        let newage = age>18?true:false;
-        return newage;
-    },
-    changeIsAdult:function(){
-        if(this.isAdult){
-            return false;
-        }else{
-            return true;
-        }
-    },
+   
+ 
     "console.log":function(){
         console.log(42);
     },
-    totalSeasons:1 + 2 + 3 + 2,
+    
 };
 character["character-age"]=age;
 character["sur name"]="stark";
 character["title"]="Lady of Winterfell"
-
+character.greet=function(){
+    alert(`I am ${character["characterName"]} and my title is ${character["title"]}`);
+}
 character.greet();
 
 character.isFemale=true;
@@ -41,14 +31,28 @@ greetVariable=function greet(){
     alert(`She is ${character["characterName"]} and her title is ${character["title"]}`);
 }
 character.greet=greetVariable();
-character.isAdult = funcage();
 
+isAdult=function(){
+    let newage = age>18?true:false;
+    return newage;
+}
+character.isAdult = isAdult();
 character["isAdult"];
+  
+character.changeIsAdult=function(){
+    if(this.isAdult){
+        return false;
+    }else{
+        return true;
+    }
+},
 character["isAdult"]=character.changeIsAdult();
+character["isAdult"];
 let keyName = 'playedBy';
 character["playedBy"]="Maisie Williams";
 alert(character[keyName]);
-
+console.log(character[42]);
+character.totalSeasons=1 + 2 + 3 + 2,
 character.totalSeasons;
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
