@@ -50,7 +50,7 @@ for(var i=0;i<userIds.length;i++){
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times(number,character) {
+function times(number,character="test") {
   let timesArray=[];
   for(let i=0;i<number;i++){
     timesArray.push(character);
