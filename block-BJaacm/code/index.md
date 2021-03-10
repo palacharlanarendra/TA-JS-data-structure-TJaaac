@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true, Both the objects are having the same reference number, so they both are equal.
+- `user === newUser;` // true, Both the objects are having the same reference number, so they both are equal, typeof the reference number is number , so they are strictly equal.
+- `user.name === newUser.name;` // true, Both the objects refers to the same reference number , so the content which they point through object.name is also strictly equal(both are number datatype value).
+- `user.name == newUser.name;`// true, Both the objects refers to the same reference number , so the content which they point through object.name is also equal.
+- `user.sibling == newUser.sibling;`// true, Both the objects refers to the same reference number , so the content which they point through object.sibiling is also equal.
+- `user.sibling === newUser.sibling;`/ true, Both the objects refers to the same reference number , so the content which they point through object.sibiling is also strictly equal(both are number datatype value).
+- `user.sibling == allBrothers;`//false , Because user.sibiling is the object with reference number, all theBrothers is an array stored by value, so they cant be equal.
+- `user.sibling === allBrothers;`//false , Because user.sibiling is the object with reference number, all theBrothers is an array stored by value, so they cant be equal.so it will not be strictly equal anyways.
+- `brothersCopy === allBrothers;`//false , Because "brotherCopy" = "user.sibiling" is the object with reference number, all theBrothers is an array stored by value, so they cant be equal.so it will not be strictly equal anyways.
+- `brothersCopy == allBrothers;`//false , Because "brotherCopy" = "user.sibiling" is the object with reference number, all theBrothers is an array stored by value, so they cant be equal.
+- `brothersCopy == user.sibling;`// true, Both the objects refers to the same reference number , so the content which they point through object.sibiling is also equal.
+- `brothersCopy === user.sibling;`// true, Both the objects refers to the same reference number , so the content which they point through object.sibiling is also equal.they are of same type, so they are strictly equal.
+- `brothersCopy[0] === user.sibling[0];`// true, Both the objects refers to the same reference number , so the content which they point through same object.sibiling and index is also equal.they are of same type, so they are strictly equal.
+- `brothersCopy[1] === user.sibling[1];`// true, Both the objects refers to the same reference number , so the content which they point through same object.sibiling and index is also equal.they are of same type, so they are strictly equal.
+- `user.sibling[1] === newUser.sibling[1];`// true, Both the objects refers to the same reference number , so the content which they point through same object.sibiling and index is also equal.they are of same type, so they are strictly equal.
